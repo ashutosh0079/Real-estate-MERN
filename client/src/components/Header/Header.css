@@ -1,0 +1,112 @@
+.h-wrapper {
+  z-index: 99;
+  position: sticky;
+  top: 0;
+}
+
+.h-container {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: var(--secondary);
+  justify-content: space-between;
+}
+
+.h-menu {
+  gap: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.h-menu > *:hover {
+  cursor: pointer;
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+.h-menu a,
+.h-menu div {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--secondary);
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  position: relative;
+}
+
+.h-menu a:hover,
+.h-menu div:hover {
+  color: var(--primary);
+}
+
+.h-menu a::after,
+.h-menu div::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: var(--primary);
+  transition: width 0.3s ease;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+
+.h-menu a:hover::after,
+.h-menu div:hover::after {
+  width: 100%;
+}
+
+.menu-icon {
+  display: none;
+}
+
+.button {
+  background-color: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: var(--primary-dark);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+  .h-menu {
+    color: var(--black);
+    position: absolute;
+    gap: 2rem;
+    font-weight: 500;
+    flex-direction: column;
+    right: 4rem;
+    top: 3rem;
+    background: white;
+    display: flex;
+    border-radius: 10px;
+    transition: all 200ms ease;
+    align-items: flex-start;
+    padding: 3rem;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+  }
+
+  .h-menu a,
+  .h-menu div {
+    color: var(--black);
+  }
+
+  .h-menu a:hover,
+  .h-menu div:hover {
+    color: var(--primary);
+  }
+
+  .h-menu a::after,
+  .h-menu div::after {
+    background: var(--primary);
+  }
+}
