@@ -2,7 +2,6 @@ import React, { useContext, useEffect, useState } from 'react'
 import { AiFillHeart } from 'react-icons/ai'
 import useAuthCheck from '../../hooks/useAuthCheck'
 import { useMutation} from "react-query";
-import { addFavourite } from '../../../../server/controllers/userController';
 import UserDetailContext from '../../context/UserDetailContext';
 import { useAuth0 } from '@auth0/auth0-react';
 import { addfav } from '../../utils/api';
