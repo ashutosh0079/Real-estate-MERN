@@ -7,7 +7,6 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      ".prisma/client/index-browser": "./node_modules/.prisma/client/index-browser.js"
+      '.prisma/client': path.resolve(__dirname, 'path/to/.prisma/client/index-browser')
     }
-  }
 })
