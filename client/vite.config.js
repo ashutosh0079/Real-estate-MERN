@@ -9,4 +9,5 @@ export default defineConfig({
     alias: {
       '.prisma/client': path.resolve(__dirname, 'path/to/.prisma/client/index-browser')
     }
+  }
 })
